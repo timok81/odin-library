@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Odin Library Exercise</title>
+</head>
+
+<body>
+    <header class="header">
+        <div class="headertitle"><h1>Library</h1></div>
+        <div class="headerimage">
+            
+        </div>
+    </header>
+
+    <div class="bookarea">
+        <div class="bookareaheader">
+            <h2>Available books</h2>
+            <button type="button" class="addbookbutton">Add book</button>
+        </div>
+
+        <div class="booklist">
+            <!--Template book under here-->
+            <!--
+            <div class="book">
+                <div class="title">
+                    <div class="booktitle">Book Title</div>
+                    <button type="button" class="removebookbutton">X</button>
+                </div>
+                <div class="bookauthor bookinfocell">Author: </div>
+                <div class="bookpublished bookinfocell">Published: </div>
+                <div class="bookpages bookinfocell">Pages: </div>
+                <div class="bookgenre bookinfocell">Genre: </div>
+                <div class="bookread bookinfocell"><button type="button" class="readbutton">Not read</button></div>
+            </div>
+            -->
+        </div>
+
+    </div>
+
+    <dialog class="createbookmodal">
+
+        <h1>Add a new book to library</h1>
+        <div class="formcontainer">
+            <form>
+                <div class="form-row">
+                    <label for="title">Title: </label>
+                    <input type="text" id="title" name="title" value="New book">
+                </div>
+                <div class="form-row">
+                    <label for="author">Author: </label>
+                    <input type="text" id="author" name="author" value="Unknown author">
+                </div>
+                <div class="form-row">
+                    <label for="published">Published: </label>
+                    <input type="text" id="published" name="published" value="2024">
+                </div>
+                <div class="form-row">
+                    <label for="pages">Pages: </label>
+                    <input type="text" id="pages" name="pages" value="404">
+                </div>
+                <div class="form-row">
+                    <label for="genre">Genre: </label>
+                    <input type="text" id="genre" name="genre" value="Fiction">
+                </div>
+                <div class="form-row">
+                    <label for="read">Read: </label>
+                    <select name="read" id="read">
+                        <option value="Read">Yes</option>
+                        <option value="Not read" selected>No</option>
+                    </select>
+                </div>
+                <div class="buttonsarea">
+                    <button type="submit" class="submitbutton">Submit</button>
+                    <button type="button" class="cancelbutton">Cancel</button>
+                </div>
+            </form>
+        </div>
+    </dialog>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>

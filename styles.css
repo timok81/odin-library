@@ -1,0 +1,242 @@
+@font-face {
+    font-family: 'poppinsregular';
+    src: url('fonts/poppins-regular-webfont.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html {
+    font-family: poppinsregular, system-ui, sans-serif;
+    font-weight: lighter;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: inherit;
+    font-size: 100%;
+    color: rgb(87, 87, 87);
+    font-weight: 100;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+h2 {
+    font-size: 2.5em;
+    
+}
+
+button {
+    width: 125px;
+    height: 40px;
+    font-size: 1.3em;
+    
+    color: white;
+    border: 0px;
+    border-radius: 8px;
+    background-color: rgb(56, 109, 255);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: rgb(231, 231, 231);
+}
+
+.header,
+.bookarea {
+    width: 800px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 8px;
+    padding: 16px 32px 16px 32px;
+}
+
+.header {
+    margin-bottom: 32px;
+    margin-top: 32px;
+    display: flex;
+}
+
+.headertitle {
+    flex: 1 1 auto;
+}
+
+.headerimage {
+    flex: 0 1 auto;
+    padding-right: 32px;
+}
+
+.bookarea {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.bookareaheader {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding-bottom: 16px;
+}
+
+.bookareaheader>h2 {
+    grid-column: 1, 2;
+}
+
+.bookareaheader>h2+button {
+    grid-column: 2, 3;
+    justify-self: right;
+}
+
+.addbookbutton:hover {
+    background-color: rgb(20, 75, 226);
+}
+
+.bookarea {
+    min-height: 800px;
+}
+
+.booklist {
+    border-top: 1px solid lightgray;
+    padding-top: 32px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 32px;
+}
+
+.book {
+    border-radius: 8px;
+    border: 1px solid rgb(216, 60, 60);
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 8px;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0, 0.15);
+}
+
+.book div {
+    align-items: center;
+}
+
+.bookinfocell {
+    padding: 8px 16px 8px 16px;
+}
+
+.title {
+    display: flex;
+    background-color: rgb(216, 60, 60);
+    padding: 8px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
+}
+
+.booktitle {
+    font-size: 1.5em;
+    color: white;
+    flex: 1 1 auto;
+}
+
+.removebookbutton {
+    flex: 0 1 auto;
+    width: 50px;
+    background-color: rgb(139, 3, 3);
+}
+
+.removebookbutton:hover {
+    background-color: rgb(95, 0, 0);
+}
+
+.readbutton:hover {
+    font-weight: bold;
+}
+
+.readbutton {
+    flex: 0 1 auto;
+    width: 90px;
+    height: 30px;
+
+    font-size: 1em;
+    font-weight: 400;
+    background-color: rgb(216, 60, 60);
+}
+
+.createbookmodal {
+    width: 500px;
+    height: 450px;
+    align-self: center;
+    justify-self: center;
+    border-radius: 8px;
+    border: 2px solid rgb(216, 60, 60);
+    padding: 16px;
+    box-shadow: 10px 10px 10px rgb(0, 0, 0, 0.25);
+}
+
+
+dialog h1 {
+    font-size: 2em;
+    margin-bottom: 16px;
+    margin-left: 32px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid gray;
+    padding-top: 16px;
+    align-items: center;
+}
+
+.form-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+input,
+select {
+    flex: 1 0 auto;
+    border-radius: 4px;
+    border: 0px;
+    background-color: rgb(235, 235, 235);
+    width: 300px;
+    height: 30px;
+    margin: 0px 0px 8px 0px;
+}
+
+input {
+    padding: 8px;
+}
+
+label {
+    text-align: right;
+    padding-right: 40px;
+    width: 130px;
+}
+
+form textarea {
+    resize: none;
+    width: 300px;
+    height: 200px;
+    border-radius: 4px;
+    border: 0px;
+    background-color: rgb(235, 235, 235);
+    margin: 8px 0px 8px 0px;
+    padding: 8px;
+}
+
+.buttonsarea {
+    margin-left: 120px;
+}
+
+form button {
+    margin: 32px 8px 0px 8px;
+}
+
+form button:hover {
+    background-color: rgb(20, 75, 226);
+}
