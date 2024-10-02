@@ -12,7 +12,6 @@ addBookButton.addEventListener("click", () => dialog.showModal());
 submitButton.addEventListener("click", createBook);
 cancelButton.addEventListener("click", () => dialog.close());
 
-//Book object
 class Book {
     constructor(title, author, published, pages, genre, read) {
         this.title = title;
@@ -118,6 +117,5 @@ function displayBooks() {
 
         //Sets functionality of delete book button
         deletebutton.addEventListener("click", function () { DeleteBook(i) });
-
     };
 }
