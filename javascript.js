@@ -20,16 +20,11 @@ class Book {
         this.pages = pages;
         this.genre = genre;
         this.read = read;
-        const id = null;
     }
 }
 
-function DeleteBook(buttonID) {
-    for (item of myLibrary) {
-        if (item.id === buttonID) {
-            myLibrary.splice(myLibrary.indexOf(item), 1);
-        }
-    }
+Book.prototype.deleteThisBook = function (bookID) {
+    myLibrary.splice(bookID, 1);
     displayBooks();
 }
 
@@ -74,7 +69,6 @@ function displayBooks() {
     for (let i = 0; i < myLibrary.length; i++) {
         const bookItem = bookList.appendChild(document.createElement("div"));
         bookItem.classList.add("book");
-        myLibrary[i].id = i;
 
         const title = bookItem.appendChild(document.createElement("div"));
         title.classList.add("title");
@@ -116,6 +110,6 @@ function displayBooks() {
         bookReadButton.addEventListener("click", function () { myLibrary[i].toggleRead(bookReadButton) });
 
         //Sets functionality of delete book button
-        deletebutton.addEventListener("click", function () { DeleteBook(i) });
+        deletebutton.addEventListener("click", function () { myLibrary[i].deleteThisBook(i) });
     };
 }
