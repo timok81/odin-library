@@ -48,19 +48,19 @@
             <form>
                 <div class="form-row">
                     <label for="title">Title: </label>
-                    <input type="text" id="title" name="title" value="New book">
+                    <input type="text" id="title" name="title" value="New book" required maxlength="20">
                 </div>
                 <div class="form-row">
                     <label for="author">Author: </label>
-                    <input type="text" id="author" name="author" value="Unknown author">
+                    <input type="text" id="author" name="author" value="Unknown author" required maxlength="25">
                 </div>
                 <div class="form-row">
                     <label for="published">Published: </label>
-                    <input type="text" id="published" name="published" value="2024">
+                    <input type="number" id="published" name="published" value="2024" required max="2024">
                 </div>
                 <div class="form-row">
                     <label for="pages">Pages: </label>
-                    <input type="text" id="pages" name="pages" value="404">
+                    <input type="number" id="pages" name="pages" value="404" required max="9999">
                 </div>
                 <div class="form-row">
                     <label for="genre">Genre: </label>
@@ -75,7 +75,7 @@
                 </div>
                 <div class="buttonsarea">
                     <button type="submit" class="submitbutton">Submit</button>
-                    <button type="button" class="cancelbutton">Cancel</button>
+                    <button type="button" class="cancelbutton">Close</button>
                 </div>
             </form>
         </div>
