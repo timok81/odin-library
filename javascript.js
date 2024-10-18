@@ -40,18 +40,37 @@ Book.prototype.toggleRead = function (bookReadButton) {
   }
 };
 
+submitButton.addEventListener("click", createBook);
+
 //Called when creating new book in modal
 function createBook(e) {
   const form = document.querySelector("form");
-  const title = form.elements.title.value;
-  const author = form.elements.author.value;
+  const titleInput = document.querySelector("#title");
+  const title = titleInput.value;
+  const authorInput = document.querySelector("#author");
+  const author = authorInput.value;
   const published = form.elements.published.value;
   const pages = form.elements.pages.value;
   const genre = form.elements.genre.value;
   const read = form.elements.read.value;
+  const errorField = document.querySelector("#errorfield");
 
-  e.preventDefault();
-  addBookToLibrary(title, author, published, pages, genre, read);
+  if (titleInput.validity.valueMissing) {
+    e.preventDefault();
+    errorField.className = "errorfieldactive"
+    errorField.textContent = "Title must contain 1-20 letters";
+  } 
+  else if (authorInput.validity.valueMissing) {
+    e.preventDefault();
+    errorField.className = "errorfieldactive"
+    errorField.textContent = "Author field must contain 1-25 letters";
+  }
+  else {
+    e.preventDefault();
+    errorField.className = "errorfield"
+    errorField.textContent = "";
+    addBookToLibrary(title, author, published, pages, genre, read);
+  }
 }
 
 //Adds book to array and calls function to update page visually
